@@ -31,6 +31,7 @@
     height: 508px;
     float: left;
     margin-left: 10px;
+    margin-bottom: 75px;
 }
 
 .prodotto img{
@@ -66,6 +67,7 @@
     height: 50px;
     background: white;
     padding: 10px;
+    line-height: 30px;
 }
 
 .prezzo-scontato {
@@ -73,9 +75,23 @@
     font-weight:bold;
 }
 
-
-
-.pr-1:hover{
-    content: url(../img/1b.webp);
+.img-hover {
+    position: absolute;
+    right: 0px;
+    opacity: 0;
 }
 
+.img-hover:hover {
+    animation-name: animazione;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animazione {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
